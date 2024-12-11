@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Confluent.Kafka" Version="2.6.1"/>
+        <PackageReference Include="Dapper" Version="2.1.35"/>
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="MongoDB.Driver" Version="3.1.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Livraria.Domain\Livraria.Domain.csproj"/>
+        <ProjectReference Include="..\Livraria.Shared\Livraria.Shared.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="LivroLeituraRepository.cs"/>
+        <Compile Remove="KafkaConsumer.cs"/>
+        <Compile Remove="Migrations\20241211034732_AtualizarLivros.cs"/>
+        <Compile Remove="Migrations\20241211034732_AtualizarLivros.Designer.cs"/>
+        <Compile Remove="Migrations\20241211044159_AtualizarLivros.cs"/>
+        <Compile Remove="Migrations\20241211044159_AtualizarLivros.Designer.cs"/>
+        <Compile Remove="Migrations\20241211044709_FirstMigration.Designer.cs"/>
+        <Compile Remove="Migrations\20241211050448_FirstMigration.Designer.cs"/>
+    </ItemGroup>
+
+</Project>
